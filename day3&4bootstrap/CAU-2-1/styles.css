@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #B7C7C4;
+}
+
+.nav {
+    display: inline-block;
+    margin-top: 30px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #29A38A;
+}
+
+.image {
+    margin-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.sub {
+    margin: 10px 15px 10px 15px;
+    height: 40px;
+    background-color: #29A38A;
+    line-height: 40px;
+}
+
+.images {
+    height: 300px;
+    object-fit: cover;
+    gap: 10px;
+}
+
+.row:nth-of-type(5) {
+    margin: 10px 0 10px 0;
+    background-color: #29A38A;
+    height: 50px;
+    line-height: 50px;
+}
+
+.content-2 {
+}
+

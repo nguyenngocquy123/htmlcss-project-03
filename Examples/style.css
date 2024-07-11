@@ -1,0 +1,22 @@
+.menu, .footer {
+    background-color: bisque;
+    height: 50px;
+}
+
+.row {
+    margin: 0;
+}
+
+.menu {
+    height: 100%;
+}
+
+.menu:nth-of-type(2) {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.fill {
+    height: 50px;
+    width: 100%;
+}

@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    margin-top: 10px;
+}
+
+
+.logo {
+    background-color: #C0C0C0;
+    line-height: 50px;
+    height: 50px;
+}
+
+.nav {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: #C0C0C0;
+    height: 30px;
+    line-height: 30px;
+}
+
+.head {
+    background-color: #C0C0C0;
+    line-height: 60px;
+    height: 60px;
+}
+
+.left {
+    background-color: #C0C0C0;
+}
+
+.right {
+    background-color: #C0C0C0;
+}
+
+.side {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    line-height: 400px;
+    height: 400px;
+}
+
+.col-sm-8 {
+    padding-right: 0;
+}
+
+.col-right {
+    background-color: #C0C0C0;
+    margin-left: 20px;
+}
+
+
+.foot {
+    background-color: #C0C0C0;
+    height: 20px;
+}
+
+

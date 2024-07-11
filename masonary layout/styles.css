@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-auto-rows: 100px;
+    /* dien vao nhung cho trong */
+    grid-auto-flow: dense;
+    gap: 10px;
+}
+
+.grid-wrapper div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.tall {
+    /* tinh tu cho no dung */
+    grid-row: span 2;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+.big {
+    grid-row: span 2;
+    grid-column: span 2;
+}

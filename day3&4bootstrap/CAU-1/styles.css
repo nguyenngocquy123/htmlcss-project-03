@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    margin-top: 10px;
+}
+
+.tall {
+    height: 50px;
+    line-height: 50px;
+}
+
+.yellow {
+    background-color: #FFC107
+}
+
+.green {
+    background-color: #28A745;
+}
+
+.container-fluid .row:nth-child(2)  {
+    margin-top: 10px;
+}
+
+.container-fluid .row:nth-of-type(3)  {
+    margin-top: 10px;
+}
+
+

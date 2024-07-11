@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  /* Toast */
+  .toast {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    border-radius: 8px;
+  }
+  
+  .toast + .toast {
+    margin-top: 24px;
+  }
+  
+  .toast__icon {
+    font-size: 24px;
+  }
+  
+  .toast__message {
+    width: 250px;
+    margin-left: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  
+  /* Success */
+  .toast--success {
+    background: #edfbf6;
+  }
+  
+  .toast--success .toast__icon {
+    color: #66cfa1;
+  }
+  
+  /* Error */
+  .toast--error {
+    background: #fbeeee;
+  }
+  
+  .toast--error .toast__icon {
+    color: #e05b63;
+  }
+  

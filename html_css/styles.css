@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 8px;
+    font-family: system-ui, sans-serif;
+}
+
+.container {
+    display: grid;
+    /* kich thuoc moi cot: cot 1 cot 2 cot 3 .... -> so luong hang la tu dong
+    -> rong ra
+    */ 
+    /* grid-template-columns: 1fr 2fr; */
+    /* grid-template-columns: 100px 1fr 100px; */
+    grid-template-columns: repeat(3,1fr);
+    /* cang ra */
+    /* align-items: stretch; */
+    /* hang 1 gia tri 60px, hang 2 gia tri 80px */
+    grid-template-rows: 50px;
+    /* nhung hang con lai tu dong la 100px */
+    /* grid-auto-rows: minmax(40px, auto); */
+    /* Bai toan 1: nhieu chu nhung van giu nguyen kich thuoc
+    -> 1. Them thuoc tinh: overflow:auto; vao item con
+    -> 2. Sua thuoc tinh grid-auto-rows: minmax(gia tri be nhat, gia tri lon nhat);   
+    */
+    /* 
+    -> dung gia tri tuyet doi: 100px
+    -> dung gia tri tuong doi:25% 25% 25% 25% -> repeat(4,25%);
+    -> dung gia tri tuong doi:20% 30% 20% 30% -> repeat(2,20% 30%);
+    -> dung gia tri tuong doi:20% 25% 20% 25% -> repeat(2,20% 25%) 10%; -> tong 90% va item cuoi cung
+    chiem 10% neu ghi dau thi item 1 chiem 10%
+    -> neu qua 100% thi xuat hien thanh ngang
+    -> dung tinh toan: 100px calc(100% - 100px)
+    */
+     /*kich thuoc moi hang: hang 1 hang 2 hang 3 .... -> so luong cot tu dong 
+    -> cao len
+     */
+    /* grid-template-rows: 60px;  */
+     /* hang so 3 khong thay nhung van ton tai */
+     /* column-gap: 20px; 
+     row-gap: 20px;  */
+     /* xuat hien thanh cuon: giai quyet thi dung fr: repeat(4,1fr); 
+     -> fr: phan doan: fractional unit
+     */
+    
+     /* Chi dinh khu vuc va dat ten */
+     grid-template-areas:
+      "h1l h1l h1r"
+      "h1l h1l h2r";
+
+
+}
+
+/* Set item-1 toi vi tri dat ten */
+.item-1 {
+    grid-area: h1r;
+}
+
+
+.item-3 {
+    grid-area: h1l;
+}
+
+
+
+.item {
+    background: orange;
+    font-size: 24px;
+    border: 1px solid #333;
+    /* overflow: auto; */
+}
+
+.item-10 {
+    /* theo duong line cot cua luoi
+    -> diem bat dau va diem ket thuc
+    */
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-column: 2 / 4;
+    /* theo duong line hang cua luoi */
+    grid-row-start: 4;
+    grid-row-end:6;
+    grid-row: 4 / 6;
+    /* 1. Neu muon hang luc nao cung chiem het o du 
+    co tang so luong cot thi thay gia tri tren bang -1 */
+}
+
+/* 
+.item-2 {
+    grid-column: 2 / 4;
+}
+
+.item-3 {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+    z-index: 1;
+}
+
+.item-4 {
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+    background: green;
+    /* opacity: 0.2; */
+    /* z-index: 2; */
+
+.page {
+    display: grid;
+    /* grid-template-columns: repeat(6,1fr); */
+    grid-template-rows: 100px 1fr 80px;
+    gap: 10px;
+    grid-template-areas:
+        "header header header header header header"
+        "menu main main main right right"
+        "menu footer footer footer footer footer";
+}
+
+.header, .main, .footer, .menu, .right { 
+    background-color: aqua;
+}
+
+.header {
+    grid-area: header;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.main {
+    grid-area: main;
+}
+
+.right {
+    grid-area: right;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.container1 {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 8px;
+    /* 1fr: chiem het khoang kha dung */
+    /* justify-content: canh theo container */
+    justify-content: flex-end;
+    /* justify-item: canh theo o trong luoi */
+}
+
+.item11, .item12, .item13, .item14, .item15 {
+    padding: 8px 12px;
+    font-size: 24px;
+}
+
+.container2 {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(3,1fr);
+    padding-top: 10px;
+        /* quyet dinh huong cua grid */
+        /* column top -> bottom, left -> right */
+        /* row left -> right, top -> bottom */
+    grid-auto-flow: column;
+}
+
+.item1 {
+    padding: 8px 12px;
+    background: orange;
+    font-style: 12px;
+}
+
+.btn-dark {
+    margin-top: 10px;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 60px;
+    aspect-ratio: 2;
+    --_g: no-repeat radial-gradient(circle closest-side,#000 90%,#0000);
+    background: 
+      var(--_g) 0%   50%,
+      var(--_g) 50%  50%,
+      var(--_g) 100% 50%;
+    background-size: calc(100%/3) 50%;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {
+      20%{background-position:0%   0%, 50%  50%,100%  50%}
+      40%{background-position:0% 100%, 50%   0%,100%  50%}
+      60%{background-position:0%  50%, 50% 100%,100%   0%}
+      80%{background-position:0%  50%, 50%  50%,100% 100%}
+  }
